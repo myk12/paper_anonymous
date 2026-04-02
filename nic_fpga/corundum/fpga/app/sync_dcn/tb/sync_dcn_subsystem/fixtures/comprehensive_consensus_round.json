@@ -1,0 +1,26 @@
+{
+  "admin_bank": 1,
+  "activate_time_ns": 40,
+  "enable_ai_replay": false,
+  "enable_consensus": true,
+  "enable_subsystem": true,
+  "execution_entries": [
+    {
+      "start_time_ns": 50,
+      "end_time_ns": 180,
+      "context_id": 0,
+      "opcode": "cons_tx",
+      "plane_id": "eps",
+      "app_id": "consensus",
+      "target_port": 0,
+      "queue_id": 0,
+      "flags": [
+        "valid",
+        "tx_enable",
+        "rx_enable",
+        "completion_event"
+      ]
+    }
+  ],
+  "ai_trace_entries": []
+}

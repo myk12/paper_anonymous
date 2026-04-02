@@ -1,0 +1,85 @@
+{
+  "admin_bank": 1,
+  "activate_time_ns": 40,
+  "enable_ai_replay": true,
+  "enable_consensus": false,
+  "enable_subsystem": true,
+  "execution_entries": [
+    {
+      "start_time_ns": 50,
+      "end_time_ns": 120,
+      "context_id": 1,
+      "opcode": "ai_rx",
+      "plane_id": "ocs",
+      "app_id": "ai_replay",
+      "target_port": 0,
+      "queue_id": 0,
+      "flags": [
+        "valid",
+        "rx_enable"
+      ]
+    },
+    {
+      "start_time_ns": 120,
+      "end_time_ns": 140,
+      "context_id": 0,
+      "opcode": "guard",
+      "plane_id": "ocs",
+      "app_id": "none",
+      "target_port": 0,
+      "queue_id": 0,
+      "flags": [
+        "valid"
+      ]
+    },
+    {
+      "start_time_ns": 150,
+      "end_time_ns": 230,
+      "context_id": 2,
+      "opcode": "ai_tx",
+      "plane_id": "ocs",
+      "app_id": "ai_replay",
+      "target_port": 0,
+      "queue_id": 0,
+      "flags": [
+        "valid",
+        "tx_enable"
+      ]
+    }
+  ],
+  "ai_trace_entries": [
+    {
+      "packet_count": 0,
+      "packet_len": 64,
+      "gap_cycles": 0,
+      "dst_mac_lo": "0x00000000",
+      "dst_mac_hi": "0x0000",
+      "ethertype": "0x88B6",
+      "dst_node_id": 0,
+      "flow_id": 0,
+      "payload_seed": "0x00000000"
+    },
+    {
+      "packet_count": 0,
+      "packet_len": 64,
+      "gap_cycles": 0,
+      "dst_mac_lo": "0xAABBCCDD",
+      "dst_mac_hi": "0x1234",
+      "ethertype": "0x88B6",
+      "dst_node_id": 2,
+      "flow_id": 7,
+      "payload_seed": "0x10203040"
+    },
+    {
+      "packet_count": 2,
+      "packet_len": 64,
+      "gap_cycles": 1,
+      "dst_mac_lo": "0xAABBCCDD",
+      "dst_mac_hi": "0x1234",
+      "ethertype": "0x88B6",
+      "dst_node_id": 2,
+      "flow_id": 7,
+      "payload_seed": "0xCAFEBABE"
+    }
+  ]
+}

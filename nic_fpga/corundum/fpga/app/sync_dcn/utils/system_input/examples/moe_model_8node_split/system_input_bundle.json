@@ -1,0 +1,11 @@
+{
+  "experiment_name": "mixtral_8x7b_8node_walkthrough",
+  "input_parts": {
+    "workload_specification": "workload_specification.json",
+    "processor_timing_model": "processor_timing_model.json",
+    "topology_fabric_model": "topology_fabric_model.json"
+  },
+  "metadata": {
+    "note": "Recommended split-input layout for the system-overview architecture: workload specification, processor timing model, and topology & fabric model are separated into independent files."
+  }
+}

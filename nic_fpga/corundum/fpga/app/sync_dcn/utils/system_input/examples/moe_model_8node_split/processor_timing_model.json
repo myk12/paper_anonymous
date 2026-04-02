@@ -1,0 +1,18 @@
+{
+  "processor_model": {
+    "type": "deterministic_accelerator",
+    "example": "Groq-like processor",
+    "interface": "pcie_dma_shared_buffers",
+    "execution_model": "synchronous phases with deterministic tensor readiness",
+    "timing_model": {
+      "mode": "bounded",
+      "dispatch_prepare_ns": 800,
+      "expert_compute_ns": 6000,
+      "combine_prepare_ns": 800,
+      "completion_slack_ns": 400
+    }
+  },
+  "metadata": {
+    "role": "processor_timing_model"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "topology": {
+    "eps": {
+      "type": "spine_leaf",
+      "hop_delay_ns": 300,
+      "nic_pipeline_ns": 200,
+      "queue_budget_ns": 500
+    },
+    "ocs": {
+      "type": "matching_fabric",
+      "epoch_duration_model": "derived",
+      "port_rate_gbps": 400,
+      "tx_pipeline_ns": 100,
+      "fabric_latency_ns": 200,
+      "rx_pipeline_ns": 100,
+      "nic_cycle_ns": 1,
+      "reconfiguration_time_ns": 200,
+      "guard_band_ns": 200
+    }
+  },
+  "timing": {
+    "epoch_start_ns": 0,
+    "default_ai_window_ns": 800,
+    "processor_ready_slack_ns": 200
+  },
+  "policy": {
+    "eps_mode": "periodic_control_windows",
+    "ocs_mode": "matching_epochs",
+    "spill_mode": "record_only",
+    "ai_matrix_mode": "envelope"
+  },
+  "metadata": {
+    "role": "topology_fabric_model"
+  }
+}

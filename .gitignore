@@ -1,0 +1,5 @@
+# .gitignore
+*.log
+__pycache__/
+*.pyc
+sim_build_*/

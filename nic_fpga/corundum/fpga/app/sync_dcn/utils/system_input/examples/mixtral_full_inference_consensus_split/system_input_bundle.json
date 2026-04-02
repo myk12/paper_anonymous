@@ -1,0 +1,11 @@
+{
+  "experiment_name": "mixtral_8x7b_full_inference_consensus",
+  "input_parts": {
+    "workload_specification": "workload_specification.json",
+    "processor_timing_model": "processor_timing_model.json",
+    "topology_fabric_model": "topology_fabric_model.json"
+  },
+  "metadata": {
+    "note": "Split-input full-inference example for Mixtral 8x7B with model-derived MoE workload generation and 128 consensus rounds."
+  }
+}
