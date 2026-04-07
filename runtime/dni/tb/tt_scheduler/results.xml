@@ -1,0 +1,10 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1775578993" />
+    <testcase name="test_tt_scheduler_bank_flip_waits_for_safe_point" classname="test_tt_scheduler" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/tt_scheduler/test_tt_scheduler.py" lineno="108" time="0.0022652149200439453" sim_time_ns="60.0" ratio_time="26487.55288916956" />
+    <testcase name="test_tt_scheduler_tx_rx_progress_independently_between_flips" classname="test_tt_scheduler" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/tt_scheduler/test_tt_scheduler.py" lineno="183" time="0.0006830692291259766" sim_time_ns="56.00000000000001" ratio_time="81982.90541012217" />
+    <testcase name="test_tt_scheduler_invalid_entries_do_not_open_windows" classname="test_tt_scheduler" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/tt_scheduler/test_tt_scheduler.py" lineno="252" time="0.0004699230194091797" sim_time_ns="36.000000000000014" ratio_time="76608.29223744295" />
+    <testcase name="test_tt_scheduler_restart_resets_idle_channel_state" classname="test_tt_scheduler" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/tt_scheduler/test_tt_scheduler.py" lineno="284" time="0.0004899501800537109" sim_time_ns="44.0" ratio_time="89805.04914841849" />
+    <testcase name="test_tt_scheduler_completion_pulse_only_when_flagged" classname="test_tt_scheduler" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/tt_scheduler/test_tt_scheduler.py" lineno="344" time="0.0009007453918457031" sim_time_ns="48.0" ratio_time="53289.19851773425" />
+  </testsuite>
+</testsuites>

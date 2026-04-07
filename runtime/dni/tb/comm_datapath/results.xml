@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1775578995" />
+    <testcase name="test_comm_datapath_tx_prefers_processor_and_locks_frame" classname="test_comm_datapath" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/comm_datapath/test_comm_datapath.py" lineno="71" time="0.0009098052978515625" sim_time_ns="32.0" ratio_time="35172.3605870021" />
+    <testcase name="test_comm_datapath_rx_routes_processor_owned_frame" classname="test_comm_datapath" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/comm_datapath/test_comm_datapath.py" lineno="107" time="0.00042819976806640625" sim_time_ns="36.00000000000001" ratio_time="84072.90868596884" />
+    <testcase name="test_comm_datapath_disable_bypasses_processor_path" classname="test_comm_datapath" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/comm_datapath/test_comm_datapath.py" lineno="135" time="0.0003769397735595703" sim_time_ns="36.0" ratio_time="95505.9734345351" />
+  </testsuite>
+</testsuites>

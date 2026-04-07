@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1775578995" />
+    <testcase name="test_processor_adapter_stub_tx_launch_and_complete" classname="test_processor_adapter_stub" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/processor_adapter_stub/test_processor_adapter_stub.py" lineno="51" time="0.0009400844573974609" sim_time_ns="36.0" ratio_time="38294.43165102714" />
+    <testcase name="test_processor_adapter_stub_rx_accept_and_complete" classname="test_processor_adapter_stub" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/processor_adapter_stub/test_processor_adapter_stub.py" lineno="82" time="0.00040793418884277344" sim_time_ns="36.00000000000001" ratio_time="88249.52893045005" />
+    <testcase name="test_processor_adapter_stub_commit_closes_active_tx" classname="test_processor_adapter_stub" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/processor_adapter_stub/test_processor_adapter_stub.py" lineno="113" time="0.0003867149353027344" sim_time_ns="38.0" ratio_time="98263.59556103576" />
+  </testsuite>
+</testsuites>

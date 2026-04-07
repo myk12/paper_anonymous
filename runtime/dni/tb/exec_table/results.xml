@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1775578982" />
+    <testcase name="test_exec_table_banked_storage_and_readout" classname="test_exec_table" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/exec_table/test_exec_table.py" lineno="102" time="2.3203399181365967" sim_time_ns="368.0" ratio_time="158.59745252132328" />
+    <testcase name="test_exec_table_tx_rx_isolation" classname="test_exec_table" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/exec_table/test_exec_table.py" lineno="176" time="2.282140016555786" sim_time_ns="48.0" ratio_time="21.032890029439024" />
+    <testcase name="test_exec_table_multiple_entries_and_bank_switching" classname="test_exec_table" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/exec_table/test_exec_table.py" lineno="193" time="2.354158878326416" sim_time_ns="319.99999999999994" ratio_time="135.92965323882032" />
+    <testcase name="test_exec_table_reset_clears_storage" classname="test_exec_table" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/exec_table/test_exec_table.py" lineno="229" time="3.233041286468506" sim_time_ns="64.0" ratio_time="19.795602446484082" />
+  </testsuite>
+</testsuites>
