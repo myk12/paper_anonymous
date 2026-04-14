@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prepare a full Sync-DCN experiment workspace from one global input spec.
 
-This tool is the practical evaluation bridge on top of sync_dcn_global_compile:
+This tool is the practical evaluation bridge on top of utopia_global_compile:
 
 - compile one global workload/topology input
 - materialize multi-target artifacts under a results directory
@@ -26,10 +26,10 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.append(str(REPO_ROOT))
 
-from toolchain.compiler.sync_dcn_global_compile import compile_global_spec
-from toolchain.system_input.sync_dcn_build_moe_model_experiment import build_global_ai_spec
-from toolchain.system_input.sync_dcn_load_system_input import load_system_input_spec
-from toolchain.visualization.sync_dcn_export_schedule import (
+from toolchain.compiler.utopia_global_compile import compile_global_spec
+from toolchain.inputs.build_moe_model_experiment import build_global_ai_spec
+from toolchain.inputs.load_input import load_system_input_spec
+from toolchain.experiments.export_schedule import (
     build_flat_rows,
     export_csv,
     export_flat_json,
@@ -155,7 +155,7 @@ def extract_processor_artifacts(compiled: Dict[str, Any]) -> Dict[str, Dict[str,
             "phase_timeline": phase_windows,
             "ai_trace_entries": annotate_ai_trace_entries_with_timing(node_program),
             "metadata": {
-                "source": "sync_dcn_prepare_experiment",
+                "source": "utopia_prepare_experiment",
                 "note": (
                     "Processor/plugin-side artifact. In the target architecture, AI trace "
                     "descriptors belong here; the current FPGA prototype still colocates "
@@ -315,7 +315,7 @@ def extract_fabric_artifacts(compiled: Dict[str, Any], global_input: Dict[str, A
                 "component_metadata": component,
                 "schedule": plane_windows,
                 "metadata": {
-                    "source": "sync_dcn_prepare_experiment",
+                    "source": "utopia_prepare_experiment",
                     "note": "Prototype fabric artifact. Current schedule is replicated to each plane component.",
                 },
             }

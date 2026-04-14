@@ -5,7 +5,7 @@ phase list into the low-level JSON ABI understood by the FPGA NIC.
 
 Active tool:
 
-- [`sync_dcn_compile.py`](sync_dcn_compile.py)
+- [`compile.py`](compile.py)
   - expands `consensus_periodic`, `ai_window`, `guard`, and `reconfig`
     phases into:
     - `execution_entries`

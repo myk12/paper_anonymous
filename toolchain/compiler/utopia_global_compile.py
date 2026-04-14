@@ -6,7 +6,7 @@ This tool is intentionally simple:
 - consensus workloads use periodic EPS control windows
 - AI matrix workloads use greedy OCS matching epochs
 - local per-node programs are lowered into the existing low-level JSON ABI via
-  sync_dcn_compile.compile_spec
+  compile.compile_spec
 
 The goal is to create a usable research pipeline, not a fully general or fully
 optimal scheduler.
@@ -27,8 +27,8 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.append(str(REPO_ROOT))
 
 from toolchain.lowering.schedule_timing import estimate_epoch_duration_ns, resolve_ai_plane_timing
-from toolchain.lowering.sync_dcn_compile import compile_spec
-from toolchain.system_input.sync_dcn_build_moe_model_experiment import build_compiled_matrix, normalize_matrix
+from toolchain.lowering.compile import compile_spec
+from toolchain.inputs.build_moe_model_experiment import build_compiled_matrix, normalize_matrix
 
 try:
     import yaml  # type: ignore
@@ -112,7 +112,7 @@ def make_ai_phase(
     flow_id: int,
     payload_seed: int,
 ) -> Dict[str, Any]:
-    """Create a high-level local AI phase compatible with sync_dcn_compile."""
+    """Create a high-level local AI phase compatible with compile.py."""
 
     return {
         "type": "ai_window",
@@ -533,7 +533,7 @@ def compile_global_spec(spec: Dict[str, Any]) -> Dict[str, Any]:
             "metadata": {
                 "node_id": node_id,
                 "hostname": str(node_metadata_map.get(node_id, {}).get("hostname", f"node-{node_id}")),
-                "source": "sync_dcn_global_compile",
+                "source": "utopia_global_compile",
                 "source_workloads": [],
             },
             "phases": [],

@@ -9,7 +9,5 @@ logic for Utopia.
 - `lowering/`: translation from global schedules into per-target artifacts
 - `orchestration/`: host and switch setup/install scripts
 - `topology/`: topology validation and system-model utilities
-
-At the moment, the compiler and lowering directories are placeholders for the
-next migration step, while orchestration and topology already contain early
-scripts.
+- `inputs/`: high-level system and workload input builders/loaders
+- `experiments/`: end-to-end experiment preparation and artifact export helpers

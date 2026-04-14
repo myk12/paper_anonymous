@@ -4,10 +4,15 @@ This is the main entry point for the active software flow.
 
 Tool:
 
-- [`sync_dcn_prepare_experiment.py`](sync_dcn_prepare_experiment.py)
+- [`utopia_prepare_experiment.py`](utopia_prepare_experiment.py)
   - runs the global co-compiler
   - materializes `results/` and `compat/`
   - writes manifests and timeline exports
+- [`export_schedule.py`](export_schedule.py)
+  - exports:
+    - CSV timeline
+    - flattened JSON timeline
+    - Mermaid Gantt data
 
 Output layout:
 
@@ -31,3 +36,9 @@ Artifact meaning:
 - `nic/`: formal NIC schedules with split TX/RX entries
 - `fabric/`: EPS and OCS control schedules
 - `compat/prototype_runtime/`: compatibility-only FPGA prototype artifacts
+
+This directory also contains the schedule-export helpers used for:
+
+- debugging views
+- timeline inspection
+- figure inputs

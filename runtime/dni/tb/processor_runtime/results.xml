@@ -1,8 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1775578994" />
-    <testcase name="test_processor_runtime_control_fanout" classname="test_processor_runtime" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/processor_runtime/test_processor_runtime.py" lineno="93" time="0.002785921096801758" sim_time_ns="28.0" ratio_time="10050.53590072743" />
-    <testcase name="test_processor_runtime_tx_mux_selects_active_app" classname="test_processor_runtime" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/processor_runtime/test_processor_runtime.py" lineno="140" time="0.00047588348388671875" sim_time_ns="31.999999999999996" ratio_time="67243.3507014028" />
-    <testcase name="test_processor_runtime_rx_demux_selects_active_app" classname="test_processor_runtime" file="/Users/mayuke/Project/SOSP26/paper_anonymous/runtime/dni/tb/processor_runtime/test_processor_runtime.py" lineno="164" time="0.00040221214294433594" sim_time_ns="31.999999999999993" ratio_time="79560.0047421458" />
-  </testsuite>
-</testsuites>

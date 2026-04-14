@@ -5,6 +5,7 @@ TOPLEVEL_LANG = verilog
 SIM ?= icarus
 WAVES ?= 1
 COMPILE_ARGS += -I../../../../..
+COMPILE_ARGS += -I../../rtl
 
 COCOTB_HDL_TIMEUNIT = 1ns
 COCOTB_HDL_TIMEPRECISION = 1ps
@@ -24,9 +25,9 @@ VERILOG_SOURCES += ../../rtl/core/processor_runtime.v
 VERILOG_SOURCES += ../../rtl/core/processor_adapter_stub.v
 VERILOG_SOURCES += ../../rtl/core/comm_datapath.v
 VERILOG_SOURCES += ../../rtl/dni_subsystem.v
-VERILOG_SOURCES += ../../../../lib/axi/rtl/axil_reg_if_rd.v
-VERILOG_SOURCES += ../../../../lib/axi/rtl/axil_reg_if_wr.v
-VERILOG_SOURCES += ../../../../lib/axi/rtl/axil_reg_if.v
+VERILOG_SOURCES += ../../../../platforms/corundum/fpga/lib/axi/rtl/axil_reg_if_rd.v
+VERILOG_SOURCES += ../../../../platforms/corundum/fpga/lib/axi/rtl/axil_reg_if_wr.v
+VERILOG_SOURCES += ../../../../platforms/corundum/fpga/lib/axi/rtl/axil_reg_if.v
 
 export PARAM_PTP_TS_WIDTH := 96
 export PARAM_P_NODE_ID := 0

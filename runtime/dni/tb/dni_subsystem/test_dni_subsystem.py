@@ -309,7 +309,7 @@ async def wait_for_active_instruction(dut, expected_app_id, expected_opcode, max
 
 async def wait_for_consensus_commit(dut, expected_mask, max_cycles=64):
     """Wait until the internal consensus core reports the requested commit mask."""
-    core = dut.processor_runtime_inst.consensus_node_inst.consensus_core_inst
+    core = dut.consensus_node_inst.consensus_core_inst
 
     for _ in range(max_cycles):
         await RisingEdge(dut.clk)
@@ -861,7 +861,7 @@ async def test_compiled_consensus_round_end_to_end(dut):
     assert (window_status & 0x1) == 0
     assert current_entry_ptr == len(spec["execution_entries"])
 
-    core = dut.processor_runtime_inst.consensus_node_inst.consensus_core_inst
+    core = dut.consensus_node_inst.consensus_core_inst
     commit_valid_mask = int(core.o_commit_valid.value)
     commit_log_flat = int(core.o_commit_log.value)
     node1_commit = (commit_log_flat >> (1 * 40 * 8)) & ((1 << (40 * 8)) - 1)
@@ -897,7 +897,7 @@ async def test_consensus_quorum_fail_then_clear_halt_and_recover(dut):
     await advance_ptp_to_ns(dut, 220, settle_cycles=8)
     await wait_for_consensus_halt_state(dut, expected_halt=1)
 
-    core = dut.processor_runtime_inst.consensus_node_inst.consensus_core_inst
+    core = dut.consensus_node_inst.consensus_core_inst
     assert int(core.o_commit_valid.value) == 0
 
     # Clear halt through the exposed control ABI, then prepare the next bank

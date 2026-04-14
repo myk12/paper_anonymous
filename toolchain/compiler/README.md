@@ -5,7 +5,7 @@ and multi-target execution artifacts.
 
 Active tool:
 
-- [`sync_dcn_global_compile.py`](sync_dcn_global_compile.py)
+- [`utopia_global_compile.py`](utopia_global_compile.py)
   - consumes normalized workload, processor, and topology input
   - produces a human-readable global plan
   - lowers the result into processor, NIC, and fabric views
@@ -21,5 +21,5 @@ Current output:
   - `results/fabric`
 
 Most users should reach this stage through
-[`sync_dcn_prepare_experiment.py`](../experiments/sync_dcn_prepare_experiment.py)
+[`utopia_prepare_experiment.py`](../experiments/utopia_prepare_experiment.py)
 instead of invoking the compiler directly.
